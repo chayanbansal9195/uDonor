@@ -23,7 +23,7 @@ app.get('/google',(req,res)=>{
 
 //leaderboard
 app.get('/leaderboard',(req,res)=>{
-    db.query("select * from leaderboard order by donation desc",(err,results)=>{
+    db.query("select * from leaderboard order by Credits desc",(err,results)=>{
         res.render('leaderboard',{
             data:results
         })
@@ -39,6 +39,28 @@ app.get('/',(req,res)=>{
 app.get('/ngo',(req,res)=>{
     res.render('ngo')
 })
+
+app.get('/books',(req,res)=>{
+    res.render('books')
+})
+app.get('/proceed',(req,res)=>{
+    res.render('proceed')
+})
+app.get('/proceed1',(req,res)=>{
+    res.render('proceed1')
+})
+
+
+
+app.get('/paid',(req,res)=>{
+    res.render('paid')
+})
+
+app.get('/food',(req,res)=>{
+    res.render('food')
+})
+
+
 app.get('/thank',(req,res)=>{
     res.render('thank')
 })

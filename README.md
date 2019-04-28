@@ -1,2 +1,0 @@
-# uDonor
-Donation web app

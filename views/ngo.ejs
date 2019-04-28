@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <!-- Compiled and minified CSS -->
@@ -13,24 +14,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     
 </head>
-<body>
-
+<body onload = "myFunction()"> 
+        
+       
+       
+      
     <div class = "my-container">
-
+            
         <div class = "left">
             <div class = "logo">
-                <img height = "120px" widht = "120px" src = "images/icon.png">
+                    <a href = "http://localhost:3000">
+                        <img height = "150px" width = "220px" src = "images/newlogo.png" 
+                        style="margin-left:-38px">  </a>
+               
             </div>
 
 
             <div class = "userInfo">
-                <img height="100px" width="100px" style = "margin-left: 102px;" src = "images/profile_pic.jpg">
-                <h2 style = "margin-left: 102px;"> Jone Doe</h2><br><br>
+                <img height="100px" width="100px" style = "margin-left: 55px;" src = "images/public_pic.png">
+                <h2 style = "padding-left: 55px;"> Jane Doe</h2>
             </div>
-            <div class = "lboard">
-                <a href = "#">About US</a><br><br>
-                <a href = "#">Know About Causes</a><br><br>
-                <a href = "http://localhost:3000/leaderboard">Leaderboard</a><br>
+            <div class = "nav-list">
+                
+                <a href = "http://localhost:3000/leaderboard">Top Donors</a>
             </div>
         </div>
 
@@ -39,9 +45,7 @@
                 <div class = "text">
                     <h3>Donate For A Positive Change</h3>
                 </div>
-                <div class = "button-campaign">
-                   <a href="http://localhost:3000/google"><button>Donate Now</button></a> 
-                </div>
+                
             </div>
 
             <div class = "mid">
@@ -50,12 +54,12 @@
                     <div class = "card" style="margin-left: 50px;">
                       
                         <div style="padding:3px 3px 3px 3px" class = "pic">
-                            <a href="http://localhost:3000/google">   <img src="https://img.icons8.com/ios/100/000000/cash-in-hand.png"></a>
+                            <a href="http://localhost:3000/process">   <img src="images/Money.jpeg"></a>
                         </div>
                         
 
                         <div class = "text" style="padding-bottom: 10px;">
-                            <a href="http://localhost:3000/google"><h3 style = "text-align:center;">Money</h3></a>
+                            <a href="http://localhost:3000/process"> <h3 style = "text-align:center;">Money</h3></a>
                         </div>
 
                     </div>
@@ -65,11 +69,11 @@
                         <div class = "card" style="margin-left: 50px;">
                           
                                 <div class = "pic">
-                                     <a href="http://localhost:3000/google">    <img src="https://img.icons8.com/ios/100/000000/books-filled.png"></a>
+                                     <a href="http://localhost:3000/books">    <img src="images/book.jpeg"></a>
                                 </div>
         
                                 <div class = "text" style="padding-bottom: 10px;">
-                                    <h3 style = "text-align:center;">Books</h3>
+                                    <a href="http://localhost:3000/books"> <h3 style = "text-align:center;">Books</h3></a>
                             </div>
     
                             
@@ -81,11 +85,11 @@
                             <div class = "card" style="margin-left: 50px;">
                               
                                     <div class = "pic">
-                                            <img src="https://img.icons8.com/ios/100/000000/ingredients-filled.png">
+                                        <a href="http://localhost:3000/food"><img src="images/food.jpg"></a>
                                     </div>
             
                                     <div class = "text" style="padding-bottom: 10px;">
-                                        <h3 style = "text-align:center;">Food</h3>
+                                        <a href="http://localhost:3000/food"><h3 style = "text-align:center;">Food</h3></a>
                                 </div>
         
                                 
@@ -101,6 +105,33 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+
+            function myFunction(){
+    
+                window.setTimeout(animateIt1,100);
+                window.setTimeout(animateIt2,200);
+                window.setTimeout(animateIt3,300);
+    
+    
+                function animateIt1(){
+                    let elem = document.getElementsByClassName('card')[0];
+                    elem.style.animation = 'example 1s 1';
+                }
+    
+                function animateIt2(){
+                    let elem = document.getElementsByClassName('card')[1];
+                    elem.style.animation = 'example 1s 1';
+                }
+    
+                function animateIt3(){
+                    let elem = document.getElementsByClassName('card')[2];
+                    elem.style.animation = 'example 1s 1';
+                }
+    
+            }
+        </script>
 
 </body>
 </html>

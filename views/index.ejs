@@ -11,36 +11,38 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
     <link rel="stylesheet" type="text/css"  href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    
+
 </head>
-<body>
+<body onload="myFunction()">
 
     <div class = "my-container">
 
         <div class = "left">
-            <div class = "logo">
-                <img height = "120px" widht = "120px" src = "images/icon.png">
-            </div>
+                <div class = "logo">
+                        <a href = "http://localhost:3000">
+                            <img height = "140px" width = "220px" src = "images/newlogo.png" 
+                               style="margin-left:-38px" >  </a>
+                   
+                </div>
 
 
             <div class = "userInfo">
-                <img height="100px" width="100px" style = "margin-left: 102px;" src = "images/profile_pic.jpg">
-                <h2 style = "margin-left: 102px;"> Jone Doe</h2><br><br>
+                <img height="100px" width="100px" style = "margin-left: 55px;" src = "images/public_pic.png">
+                <h2 style = "padding-left: 55px;"> Jane Doe</h2>
             </div>
-            <div class = "lboard">
-                <a href = "#">About US</a><br><br>
-                <a href = "#">Know About Causes</a><br><br>
-                <a href = "http://localhost:3000/leaderboard">Leaderboard</a><br>
+            <div class = "nav-list">
+               
+                <a href = "http://localhost:3000/leaderboard">Top Donors</a>
             </div>
         </div>
 
         <div class = "right">
             <div class = "top">
                 <div class = "text">
-                    <h3>Donate For A Positive Change</h3>
+                    <h3 style = "letter-spacing: 1.5px; font-size:30px;">Donate For A Positive Change</h3>
                 </div>
                 <div class = "button-campaign">
-                    <button>Create Campaign</button>
+                    <button><strong>Create Campaign</strong></button>
                 </div>
             </div>
 
@@ -50,7 +52,7 @@
                     <div class = "card" style="margin-left: 50px;">
                       
                         <div class = "pic">
-                                <img src = "images/ngo.png">
+                             <a href="http://localhost:3000/ngo">   <img src = "images/ngo.png"></a>
                         </div>
 
                         <div class = "text" style="padding-bottom: 10px;">
@@ -64,11 +66,11 @@
                         <div class = "card" style="margin-left: 50px;">
                           
                                 <div class = "pic">
-                                        <img src = "images/ogh.png">
+                                    <a href="http://localhost:3000/ngo" ><img src = "images/ogh.png"></a>
                                 </div>
         
                                 <div class = "text" style="padding-bottom: 10px;">
-                                    <h3 style = "text-align:center;">Old Age Home</h3>
+                                    <h3 style = "text-align:center;"><a href="http://localhost:3000/ngo" >Old Age Home</a></h3>
                             </div>
     
                             
@@ -80,11 +82,11 @@
                             <div class = "card" style="margin-left: 50px;">
                               
                                     <div class = "pic">
-                                            <img src = "images/pm.png">
+                                        <a href="http://localhost:3000/ngo" ><img src = "images/pm.png"></a>
                                     </div>
             
                                     <div class = "text" style="padding-bottom: 10px;">
-                                        <h3 style = "text-align:center;">PM Fund</h3>
+                                        <h3 style = "text-align:center;"><a href="http://localhost:3000/ngo" >PM Fund</a></h3>
                                 </div>
         
                                 
@@ -94,12 +96,41 @@
             </div>
 
             <div class = "bottom">
-
+                <div class = "info">
+                    <P style = "text-align: center;"><strong>“Every one deserves a good life and a fair chance. That's why uDonor is here. We won't give up until every one has a fair chance at a safe and happy life!”</strong></P>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+
+        function myFunction(){
+
+            window.setTimeout(animateIt1,100);
+            window.setTimeout(animateIt2,200);
+            window.setTimeout(animateIt3,300);
+
+
+            function animateIt1(){
+                let elem = document.getElementsByClassName('card')[0];
+                elem.style.animation = 'example 1s 1';
+            }
+
+            function animateIt2(){
+                let elem = document.getElementsByClassName('card')[1];
+                elem.style.animation = 'example 1s 1';
+            }
+
+            function animateIt3(){
+                let elem = document.getElementsByClassName('card')[2];
+                elem.style.animation = 'example 1s 1';
+            }
+
+        }
+    </script>
 
 </body>
 </html>

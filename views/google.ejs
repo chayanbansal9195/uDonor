@@ -47,7 +47,7 @@
         height: 100%;
         margin: 0;
         padding: 100px;
-        background-color: #b4bfbf;
+        background-color: #f8f8f8;
       }
       #map {
         height: 100%;
@@ -67,7 +67,8 @@
       }
       #directions-panel {
         margin-top: 10px;
-        background-color: white;
+        background-color: lightgrey;
+        color: black;
         padding: 10px;
         overflow: hidden;
         height: 250px;
@@ -78,13 +79,15 @@
   <body>
     <div id="map"></div>
     <div id="right-panel">
-      <div style="margin-top:-85%; ">
+      <div style="margin-top:-85%; width: 20vw">
+        
+        
         <select style="display:none" id="start">
           <option value="Perungudi">Current Location</option>
         </select>
         <br />
-        <b>NGO</b>
-        <select id="end">
+        <b style = "font-size: 25px; margin-bottom: 5px;">Which NGO would you like to donate to ?</b><br>
+        <select id="end" style="float:left ;margin-top:10px; margin-bottom:10px">
           <option
             value="16/18, Nainiyappan Street Jeth Nagar, 1st Main Road Mandeveli, Chennai, Tamil Nadu 600028, 632014"
             >Teach for India</option
@@ -98,21 +101,18 @@
             >Rainbow Homes</option
           >
           <option value="Los Angeles, CA">Blue Cross of India</option>
-        </select>
-        <br />
-        <input
+        </select><input
           type="submit"
           id="submit"
           style="background: none; border: none;
-        background: #1167b1; margin: 2px; border-radius: 500px; color: white;"
+                 background: #1167b1; margin: 2px; border-radius: 500px; color: white;
+                 font-size:20px;"
         />
       </div>
       <div id="directions-panel"></div>
       <br />
-      <a href="http://localhost:3000/thank"
-        ><button>Donate it Yourself</button></a
-      >
-      <a href="http://localhost:3000/process"
+      
+      <a href="http://localhost:3000/process" style = " font-size:20px;"
         ><button>Want a volunteer?</button></a
       >
     </div>
