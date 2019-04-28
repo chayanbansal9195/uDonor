@@ -22,9 +22,9 @@ app.get('/google',(req,res)=>{
 })
 
 //leaderboard
-app.get('/',(req,res)=>{
+app.get('/leaderboard',(req,res)=>{
     db.query("select * from leaderboard order by donation desc",(err,results)=>{
-        res.render('index',{
+        res.render('leaderboard',{
             data:results
         })
         
@@ -32,8 +32,8 @@ app.get('/',(req,res)=>{
    
 })
 
-app.get('/leaderboard',(req,res)=>{
-    res.render('leaderboard')
+app.get('/',(req,res)=>{
+    res.render('index')
 })
 
 app.get('/ngo',(req,res)=>{
